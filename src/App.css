@@ -1,32 +1,114 @@
+
+* {
+  box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
+  font-family: 'Space Mono', monospace;
+  background-color: #dfe6e9;
+  width: 96%;
+  margin-left: 2%;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+
+.App-image{
+  width: 440px;
+  height: 300px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App-item{
+  padding-top: 30px;
+  margin-top: 2%;
 }
 
-.App-link {
-  color: #61dafb;
+.App-navigation{
+    list-style-type: none;
+    margin-left: 27%;
+    width: 49%;
+    overflow: hidden;
+    margin-bottom: 5%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-navitem{
+
+    display: inline-block;
+    text-align: center;
+    padding-left: 9%;
+    text-decoration: none;
+
 }
+
+.App-date{
+  transform:rotate(270deg);
+}
+#specialDate{
+  font-weight: 600;
+  font-size: 50px;
+}
+
+.App-body{
+  width: 64%;
+  padding-right: 5%;
+}
+
+.App-arrow{
+  transition: .5s ease;
+}
+
+.App-title{
+  width: 45%;
+  text-transform: uppercase;
+}
+
+.App-arrow:hover{
+
+  opacity: 0.3
+
+}
+
+#leftArrow{
+  transform: rotate(180deg);
+}
+
+
+
+.row::after {
+  
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {
+  width: 33.33%;
+  float:left;
+
+}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+/*ANIMATIONS*/
+
+
+.fade-appear{
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-appear.fade-appear-active{
+  opacity: 1;
+  transition: opacity 1000ms linear;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Space+Mono');
+

@@ -5,7 +5,7 @@
 
 .App {
   font-family: 'Space Mono', monospace;
-  background-color: #dfe6e9;
+  background-color: #F8F8F8;
   width: 96%;
   margin-left: 2%;
 }
@@ -13,7 +13,8 @@
 
 .App-image{
   width: 440px;
-  height: 300px;
+  height: 300px !important;
+  margin-left: 50%;
 }
 
 .App-item{
@@ -23,32 +24,48 @@
 
 .App-navigation{
     list-style-type: none;
-    margin-left: 27%;
-    width: 49%;
+    width: 50%;
     overflow: hidden;
     margin-bottom: 5%;
+    margin-left: 20%;
+    /*position: absolute;
+    top:400px;
+    left:400px;*/
+
 }
 
 .App-navitem{
 
     display: inline-block;
     text-align: center;
-    padding-left: 9%;
+    padding-left: 8%;
     text-decoration: none;
 
 }
 
 .App-date{
-  transform:rotate(270deg);
+    transform:rotate(270deg);
+    position: absolute;
+    top:80px;
+    left: 250px;
+}
+#monthYear{
+  z-index: -1;
+  padding-left: 40px;
+  
 }
 #specialDate{
   font-weight: 600;
   font-size: 50px;
+  z-index: 1;
+  padding-right: 10px;
+  
 }
 
 .App-body{
   width: 64%;
   padding-right: 5%;
+  margin-left: 20%;
 }
 
 .App-arrow{
@@ -56,8 +73,9 @@
 }
 
 .App-title{
-  width: 45%;
+  width: 40%;
   text-transform: uppercase;
+  margin-left: 20%;
 }
 
 .App-arrow:hover{
@@ -79,22 +97,14 @@
   display: table;
 }
 
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {
-  width: 33.33%;
+/*  THE COLUMN WHICH I HAVE USED*/
+
+.col-6 {
+  width: 50%;
   float:left;
 
 }
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
+
 
 /*ANIMATIONS*/
 
@@ -106,9 +116,64 @@
 
 .fade-appear.fade-appear-active{
   opacity: 1;
-  transition: opacity 1000ms linear;
+  transition: opacity 2000ms linear;
+}
+
+/**
+MEDIA QUERIES  FOR RESPONSIVE DESIGN
+*/
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+      width: 100%;
+  }
+
+  .App-image{
+    width: 90%;
+    height: 300px;
+    margin:0;
+    margin-left: 10%;
+    padding: 0;
+  }
+
+  .App-date{
+    transform:rotate(270deg);
+    position: absolute;
+    top:40px;
+    left:10px;
+}
+
+.App-navigation{
+
+  width: 100%;
+  position: absolute;
+  top:350px;
+  right:80px;
+
+}
+
+.App-body{
+  margin-left: 10%;
+}
+.App-title{
+  margin-top:25%;
+  width: 50%;
+  margin-left: 10%;
+}
+
+#viewAll{
+  display: none;
+}
+
+.App-navitem{
+  padding-left: 25%;
 }
 
 
+
+}
+
+/*FONT IMPORTED*/
 @import url('https://fonts.googleapis.com/css?family=Space+Mono');
 
